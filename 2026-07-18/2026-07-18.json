@@ -1,137 +1,149 @@
 {
-  "hero_headline": "中国AI公司发布全球最大开源模型Kimi K3",
-  "daily_overview": "今日科技焦点是中国AI公司月之暗面发布全球最大开源模型Kimi K3，性能逼近国际顶尖水平（多家报道）。OpenAI推出AI记分卡并打造LLM超级黑客GPT-Red提升安全。财经方面，Kimi K3引发AI竞争担忧，芯片股创一年多最差周，苹果短暂超越英伟达；地缘紧张推升油价，对冲基金大举做多。时政方面，美伊冲突进入第七夜，美国继续空袭伊朗；中国释放可能恢复香港贸易特权信号；朝鲜年轻人通过韩流接触外部文化。AI突破与地缘风险共同主导市场情绪。",
+  "hero_headline": "月之暗面发布Kimi K3，全球最大开源模型震动市场",
+  "daily_overview": "今日科技界最大亮点是中国AI公司月之暗面发布Kimi K3，全球参数最大的开源模型，性能接近国际顶尖，引发AI竞争格局重估。资本市场剧烈反应，AI和芯片股遭遇抛售，苹果市值短暂超越英伟达；地缘方面美伊冲突持续，霍尔木兹海峡航运风险升高，对冲基金疯狂押注油价上涨，全球能源市场承压。时政方面，中国释放信号或恢复香港对美贸易特权，欧盟敦促以色列停止扩建定居点。",
   "tech_briefs": [
     {
-      "title": "月之暗面发布2.8万亿参数开源模型Kimi K3",
-      "url": "https://news.smol.ai/issues/26-07-16-kimi-k30/",
-      "source": "Smol AI News",
-      "summary": "Moonshot AI推出Kimi K3，2.8T参数，1M上下文窗口，性能达Opus 4.8级别，定价与Sonnet 5持平，是目前最大开源模型。（多家报道）",
+      "title": "月之暗面发布全球最大开源模型Kimi K3",
+      "url": "https://www.bbc.co.uk/news/articles/cy9w4q8pgp0o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Business",
+      "summary": "中国AI初创公司月之暗面发布Kimi K3，2.8万亿参数，支持百万token上下文，性能接近国际顶尖，引发中美AI竞争格局重估。（多家报道）",
       "importance": 10
     },
     {
-      "title": "OpenAI推出AI记分卡衡量投资回报",
+      "title": "OpenAI推出AI评分卡衡量模型投资回报",
       "url": "https://openai.com/index/a-scorecard-for-the-ai-age",
       "source": "OpenAI News",
-      "summary": "OpenAI CFO发布实用AI记分卡，通过有效工作、每任务成本、可靠性、计算回报率等指标评估AI ROI。",
-      "importance": 8
-    },
-    {
-      "title": "OpenAI打造LLM超级黑客GPT-Red提升模型安全",
-      "url": "https://www.technologyreview.com/2026/07/15/1140514/meet-gpt-red-an-llm-super-hacker-openai-built-to-make-its-models-safer/",
-      "source": "MIT Tech Review AI",
-      "summary": "GPT-Red作为AI红队，自动发现模型漏洞，最新版本已发布以增强防御网络攻击能力。",
-      "importance": 8
-    },
-    {
-      "title": "天气数据遭破坏风险上升",
-      "url": "https://www.technologyreview.com/2026/07/17/1140622/weather-data-sabotage/",
-      "source": "MIT Tech Review AI",
-      "summary": "气象数据对航空、电网、农业至关重要，但面临人为破坏风险，专家呼吁加强防护。",
+      "summary": "OpenAI CFO发布AI评分卡，通过有用工作量、每次成功任务成本等指标衡量AI模型投资回报率。",
       "importance": 7
     },
     {
-      "title": "Build-Your-Own-X：从零重建技术栈掌握编程",
+      "title": "Google DeepMind提出生物弹性AI方法",
+      "url": "https://deepmind.google/blog/our-approach-to-bioresilience/",
+      "source": "DeepMind Blog",
+      "summary": "DeepMind与Isomorphic Labs公布联合生物弹性方法，旨在利用AI模型增强生物系统应对风险的能力。",
+      "importance": 6
+    },
+    {
+      "title": "全开源视频大模型VideoChat3发布",
+      "url": "https://huggingface.co/papers/2607.14935",
+      "source": "HuggingFace Trending Papers",
+      "summary": "开源视频多模态大模型VideoChat3发布，支持运动理解、长视频和流式交互，推动视频理解迈向实际应用。",
+      "importance": 6
+    },
+    {
+      "title": "GitHub热门项目教您从零重建编程技术",
       "url": "https://github.com/codecrafters-io/build-your-own-x",
       "source": "GitHub Trending",
-      "summary": "该仓库提供从零重建数据库、编译器、操作系统等经典项目的指南，帮助开发者深入理解计算机原理，是GitHub今日热度第一的项目。",
-      "importance": 6
+      "summary": "「Build Your Own X」项目指导开发者从零复现数据库、编译器、游戏引擎等，以更好地理解底层原理。",
+      "importance": 5
     }
   ],
   "finance_briefs": [
     {
-      "title": "AI冲击令杠杆基金散户投资者重创",
-      "url": "https://www.bloomberg.com/news/articles/2026/07/17/ai-upheaval-crushes-retail-traders-crowding-into-leveraged-funds",
-      "source": "Bloomberg Markets",
-      "summary": "Kimi K3突破引发AI股抛售，做多AI的杠杆基金散户遭受巨额亏损，类似去年DeepSeek事件。",
+      "title": "AI新模型冲击芯片股，苹果市值短暂超越英伟达",
+      "url": "https://www.ft.com/content/79a15abd-5892-4f1c-b038-b09a1ceecabb?syn-25a6b1a6=1",
+      "source": "Financial Times",
+      "summary": "Kimi K3发布引发AI整固抛售，美国芯片股创一年多最差周表现，苹果市值一度超越英伟达成全球第一。（多家报道）",
       "importance": 9
     },
     {
-      "title": "美国芯片股创一年多最差周表现",
-      "url": "https://www.ft.com/content/79a15abd-5892-4f1c-b038-b09a1ceecabb?syn-25a6b1a6=1",
-      "source": "Financial Times",
-      "summary": "半导体股因AI竞争加剧大幅下跌，动量交易失效导致板块重挫。",
+      "title": "对冲基金以近十年最快速度增加石油看涨押注",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-17/hedge-funds-add-bullish-oil-bets-at-fastest-pace-in-a-decade",
+      "source": "Bloomberg Markets",
+      "summary": "美伊冲突升级，布伦特原油看涨押注激增，对冲基金多头创近十年最大单周增速。",
       "importance": 8
     },
     {
-      "title": "苹果短暂超越英伟达成全球市值最高公司",
-      "url": "https://www.ft.com/content/9586223a-8339-4a57-9e2f-251899ebd211?syn-25a6b1a6=1",
+      "title": "Oracle信用风险指标创历史新高",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-17/gauge-of-oracle-s-credit-risk-hits-fresh-all-time-high",
+      "source": "Bloomberg Markets",
+      "summary": "因市场忧虑Oracle AI投资的现金消耗及未来盈利能力，其信用风险指标突破历史高点。",
+      "importance": 7
+    },
+    {
+      "title": "Baker Tilly拟发债30亿美元替换私募信贷",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-17/baker-tilly-eyes-3-billion-in-debt-to-replace-private-credit",
+      "source": "Bloomberg Markets",
+      "summary": "德意志银行协助Baker Tilly准备约30亿美元债券发行，以替代高成本私募信贷融资。",
+      "importance": 6
+    },
+    {
+      "title": "Trump Media为总统帖子快讯报价每月10万美元",
+      "url": "https://www.ft.com/content/e466df85-fa3b-4a7f-a4a1-ae04d66db99f?syn-25a6b1a6=1",
       "source": "Financial Times",
-      "summary": "苹果股价因AI抛售中相对避险，市值一度超过英伟达，但随后回落。",
-      "importance": 7
-    },
-    {
-      "title": "甲骨文信用风险指标创新高",
-      "url": "https://www.bloomberg.com/news/articles/2026/07/17/gauge-of-oracle-s-credit-risk-hits-fresh-all-time-high",
-      "source": "Bloomberg Markets",
-      "summary": "市场担忧其AI投资现金消耗过快及未来盈利能力，信用违约互换价格飙升。",
-      "importance": 7
-    },
-    {
-      "title": "对冲基金看涨原油仓位增速创近十年最快",
-      "url": "https://www.bloomberg.com/news/articles/2026/07/17/hedge-funds-add-bullish-oil-bets-at-fastest-pace-in-a-decade",
-      "source": "Bloomberg Markets",
-      "summary": "美伊冲突升级推高油价，对冲基金大举做多布伦特原油，押注供应中断。",
-      "importance": 8
+      "summary": "特朗普家族企业向用户收取六位数月费，以获得其Truth Social平台总统帖子的高速访问权。",
+      "importance": 5
     }
   ],
   "politics_briefs": [
     {
-      "title": "美国连续第七晚空袭伊朗",
-      "url": "https://www.aljazeera.com/news/2026/7/17/us-launches-seventh-straight-night-of-strikes-on-iran?traffic_source=rss",
-      "source": "Al Jazeera",
-      "summary": "美军称削弱伊朗军事能力，但德黑兰指责其打击民用基础设施，冲突持续升级。",
+      "title": "美伊冲突第七天，基础设施遭袭，霍尔木兹危机加剧",
+      "url": "https://www.nytimes.com/live/2026/07/17/world/iran-war-trump-hormuz",
+      "source": "NYT World",
+      "summary": "美国持续空袭伊朗境内桥梁、水处理厂等基础设施，对霍尔木兹海峡的控制引发全球航运风险升高。（多家报道）",
       "importance": 10
     },
     {
-      "title": "中国暗示可能恢复美国对香港贸易特权",
+      "title": "中国释放信号或恢复美国对香港贸易优惠待遇",
       "url": "https://www.npr.org/2026/07/17/g-s1-134269/china-signals-possible-return-of-u-s-trade-privileges-for-hong-kong",
       "source": "NPR World",
-      "summary": "在特朗普与习近平会晤后，中国释放缓和信号，可能改善中美贸易关系。",
+      "summary": "在中美领导人会晤后，中国暗示可能恢复美国对香港的特殊贸易特权，为双边关系缓和释放信号。",
       "importance": 8
     },
     {
-      "title": "脱北者称K-pop在朝鲜地下流行",
-      "url": "https://www.bbc.co.uk/news/articles/c0jygjezvlwo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "summary": "尽管当局严控，朝鲜年轻人通过违规渠道接触韩国流行文化，挑战偶像单一崇拜。",
-      "importance": 6
+      "title": "欧盟敦促以色列停止扩建定居点，考虑制裁",
+      "url": "https://www.aljazeera.com/news/2026/7/17/eu-urges-israel-to-halt-settlement-expansion-as-settlers-attack-children?traffic_source=rss",
+      "source": "Al Jazeera",
+      "summary": "欧盟加大施压，要求以色列停止非法定居点扩建，并谴责定居者袭击儿童事件，内部推动对以制裁。",
+      "importance": 7
     }
   ],
-  "editor_note": "Kimi K3的横空出世再次证明AI竞争白热化，市场对技术突破的定价剧烈波动。美伊冲突升级则给全球供应链带来新的不确定性，需密切关注后续发展。",
+  "editor_note": "今日Kimi K3发布标志着中国开源AI再上台阶，市场情绪剧烈波动；地缘方面美伊冲突持续升级，霍尔木兹海峡风险需密切关注。",
   "keywords": [
     "Kimi K3",
-    "开源模型",
-    "AI冲击",
+    "开源AI模型",
     "芯片股",
     "美伊冲突",
-    "油价",
+    "霍尔木兹海峡",
     "香港贸易特权",
-    "OpenAI"
+    "对冲基金",
+    "原油"
   ],
   "trading": {
-    "market_overview": "当前市场整体呈现分化态势。美股方面，标普500和纳斯达克指数ETF（SPY/QQQ）近5日回调，SPY触发MACD死叉，QQQ股价跌破20日与50日均线，技术面转弱；但个股如苹果（AAPL）仍维持强势多头排列，特斯拉（TSLA）则空头排列明显。加密市场总市值2.27万亿美元，24h微跌0.25%，比特币主导率56.4%，以太坊占比9.8%；加密恐慌贪婪指数仅27（恐慌），比特币和以太坊技术指标中性，RSI在50附近，MACD出现金叉但未形成趋势，市场情绪谨慎。中概股多数偏弱，阿里巴巴、拼多多处于空头排列，京东与腾讯短期反弹但尚未突破关键均线。商品外汇方面，黄金期货空头排列且RSI 40.9接近超卖，WTI原油近5日大涨14.51%但受制于50日均线，美元/人民币空头排列逼近52周低点，10Y美债收益率维持多头排列。整体而言，风险资产缺乏一致方向，恐慌情绪（VIX近5日涨24.88%）提示市场避险需求上升。",
+    "market_overview": "今日市场整体呈现分化格局。美股方面，标普500（SPY）和纳斯达克（QQQ）近5日分别下跌1.54%和4.16%，短期动能偏弱，但AAPL逆势上涨5.84%并接近52周高点，RSI超买至71.6。加密市场受恐慌情绪压制，加密恐慌贪婪指数降至25（极度恐慌），BTC与ETH价格在均线附近震荡，未形成明确方向。中概股普遍承压，阿里巴巴、拼多多均呈空头排列。商品端，黄金期货连续跌破均线，空头排列明确；WTI原油近5日大涨14.51%，但技术面尚未转多。宏观方面，10Y美债收益率和美元指数均保持多头排列，显示资金偏好美元资产。综合来看，各资产类别技术信号互异，需警惕极端情绪下的潜在波动。",
     "watchlist": [
       {
         "symbol": "AAPL",
-        "display_name": "苹果 (AAPL)",
+        "display_name": "Apple",
         "stance": "偏上行",
-        "rationale": "当前价格333.74美元，高于SMA20(305.52)、SMA50(302.65)、SMA200(274.22)，呈「多头排列」；MACD柱8.82高于信号5.48，金叉持续；RSI 71.6处于超买区域但未极端，1日涨0.14%，5日涨5.84%，距52周高仅0.37%，短期动能强劲。"
+        "rationale": "当前价格333.74远高于SMA20 (305.52)和SMA50 (302.65)，呈多头排列，MACD金叉(8.815>5.478)，但RSI 71.6处于超买区，短期动能强劲但面临回调风险，技术面整体偏上行。"
       },
       {
         "symbol": "TSLA",
-        "display_name": "特斯拉 (TSLA)",
+        "display_name": "Tesla",
         "stance": "偏下行",
-        "rationale": "当前价格380.84美元，低于SMA20(397.85)、SMA50(409.8)、SMA200(417.05)，呈「空头排列」；MACD -3.65低于信号-1.98，死叉运行；RSI 42.6偏弱，1日跌2.61%，5日跌6.6%，距52周高已回落23.65%，空方主导。"
+        "rationale": "价格380.84低于SMA20 (397.85)、SMA50 (409.8)及SMA200 (417.05)，空头排列成立，MACD死叉(-3.6456<-1.975)，RSI 42.6偏弱，近5日跌幅-6.6%，下跌动能延续，技术面偏下行。"
+      },
+      {
+        "symbol": "^TNX",
+        "display_name": "10Y 美债收益率 (%)",
+        "stance": "偏上行",
+        "rationale": "收益率4.54%高于SMA20 (4.5)、SMA50 (4.49)和SMA200 (4.25)，多头排列稳固，MACD金叉(0.0279>0.0207)，RSI 54中性偏强，趋势向上，技术面偏上行。"
       },
       {
         "symbol": "BTC-USD",
-        "display_name": "比特币 (BTC-USD)",
+        "display_name": "Bitcoin",
         "stance": "中性",
-        "rationale": "当前价格63905.99美元，介于SMA20(62646.62)与SMA200(73276.93)之间，短期均线发散无明确方向；RSI 51.8完全中性；MACD 96.78高于信号-245.21，呈金叉但趋势标注neutral；加密恐慌指数27（恐慌）反映市场情绪低迷，多空力量均衡。"
+        "rationale": "价格63903美元位于SMA20 (62646)和SMA50 (63708)之上，但低于SMA200 (73276)，MACD负值但差值收窄(96.6 vs -245.2)，RSI 51.8中性，结合加密恐慌指数25(极度恐慌)，方向待确认，技术面中性。"
+      },
+      {
+        "symbol": "GC=F",
+        "display_name": "黄金期货",
+        "stance": "偏下行",
+        "rationale": "价格4023低于所有均线（SMA20 4078、SMA50 4318、SMA200 4473），空头排列明确，MACD负且信号线下行(-78<-84.9)，RSI 40.9接近超卖但无反转信号，下行趋势持续，技术面偏下行。"
       }
     ],
-    "risk_caveat": "过去走势不代表未来表现，本报告仅基于公开技术指标数值进行客观解读，不构成任何投资建议。任何交易决策需结合个人风险承受能力独立判断。仅供技术指标解读参考。",
+    "risk_caveat": "本报告基于公开行情数据计算的技术指标，旨在提供客观技术状态描述。过去走势不代表未来表现，所有数据仅供技术指标解读参考，不构成任何投资建议。",
     "tickers": [
       {
         "symbol": "SPY",
@@ -359,18 +371,18 @@
         "group": "crypto",
         "currency": "USD",
         "exchangeName": "CCC",
-        "currentPrice": 63905.99,
-        "pct1Day": 0.18295981348747045,
-        "pct5Day": 0.2317681593010281,
-        "pct52WeekHigh": -49.360564705942025,
-        "pct52WeekLow": 10.664003868132308,
-        "sma20": 62646.62109375,
-        "sma50": 63708.89296875,
-        "sma200": 73276.92603515626,
-        "rsi14": 51.76779533386184,
-        "macd": 96.78051537310967,
-        "macdSignal": -245.20727195604803,
-        "macdHistogram": 341.9877873291577,
+        "currentPrice": 63903.92,
+        "pct1Day": 0.17971475419312433,
+        "pct5Day": 0.22852151903945445,
+        "pct52WeekHigh": -49.36220498459287,
+        "pct52WeekLow": 10.66041931388306,
+        "sma20": 62646.5177734375,
+        "sma50": 63708.851640625,
+        "sma200": 73276.915703125,
+        "rsi14": 51.759739947102915,
+        "macd": 96.61567384981026,
+        "macdSignal": -245.2402402595554,
+        "macdHistogram": 341.8559141093657,
         "trend": "neutral",
         "rsiState": "normal",
         "signals": []
@@ -381,18 +393,18 @@
         "group": "crypto",
         "currency": "USD",
         "exchangeName": "CCC",
-        "currentPrice": 1836.59,
-        "pct1Day": -1.4278367428233032,
-        "pct5Day": 1.705732488898811,
-        "pct52WeekHigh": -62.92513141099854,
-        "pct52WeekLow": 21.9105908460884,
-        "sma20": 1754.9187316894531,
-        "sma50": 1740.5038720703126,
-        "sma200": 2194.6484118652343,
-        "rsi14": 56.40361241676467,
-        "macd": 35.55685451515501,
-        "macdSignal": 18.24460925136409,
-        "macdHistogram": 17.31224526379092,
+        "currentPrice": 1839.69,
+        "pct1Day": -1.26145572904382,
+        "pct5Day": 1.8774026878629784,
+        "pct52WeekHigh": -62.86255234183999,
+        "pct52WeekLow": 22.116365042628125,
+        "sma20": 1755.07373046875,
+        "sma50": 1740.5658715820311,
+        "sma200": 2194.663911743164,
+        "rsi14": 56.75219663504512,
+        "macd": 35.80414601497546,
+        "macdSignal": 18.294067551439607,
+        "macdHistogram": 17.51007846353585,
         "trend": "neutral",
         "rsiState": "normal",
         "signals": []
@@ -403,18 +415,18 @@
         "group": "crypto",
         "currency": "USD",
         "exchangeName": "CCC",
-        "currentPrice": 74.89,
-        "pct1Day": -0.5074566837704411,
-        "pct5Day": -2.580644239266185,
-        "pct52WeekHigh": -70.42374725474795,
-        "pct52WeekLow": 23.959856141019934,
-        "sma20": 77.66871757507325,
-        "sma50": 73.59691497802734,
-        "sma200": 90.56750049591065,
-        "rsi14": 46.512223558026925,
-        "macd": 0.461321114204992,
-        "macdSignal": 0.9826053799556533,
-        "macdHistogram": -0.5212842657506613,
+        "currentPrice": 74.96,
+        "pct1Day": -0.41446058239328276,
+        "pct5Day": -2.489585955072692,
+        "pct52WeekHigh": -70.39610220611439,
+        "pct52WeekLow": 24.075721943261495,
+        "sma20": 77.67221755981446,
+        "sma50": 73.59831497192383,
+        "sma200": 90.56785049438477,
+        "rsi14": 46.67308322006331,
+        "macd": 0.46690513544633916,
+        "macdSignal": 0.9837221842062169,
+        "macdHistogram": -0.5168170487598778,
         "trend": "neutral",
         "rsiState": "normal",
         "signals": []
@@ -690,19 +702,19 @@
       }
     ],
     "crypto_fear_greed": {
-      "value": 27,
-      "classification": "Fear",
-      "classificationCn": "恐慌",
-      "timestamp": "2026-07-17T00:00:00.000Z"
+      "value": 25,
+      "classification": "Extreme Fear",
+      "classificationCn": "极度恐慌",
+      "timestamp": "2026-07-18T00:00:00.000Z"
     },
     "crypto_global": {
-      "totalMarketCapUsd": 2272795375461.533,
-      "total24hVolumeUsd": 66754596978.781624,
-      "marketCapChangePct24h": -0.2548945514836783,
-      "btcDominance": 56.427035544910964,
-      "ethDominance": 9.763291509438792,
-      "activeCryptocurrencies": 17631
+      "totalMarketCapUsd": 2273061583498.569,
+      "total24hVolumeUsd": 65655228072.43248,
+      "marketCapChangePct24h": -0.02998075838502655,
+      "btcDominance": 56.381942638903325,
+      "ethDominance": 9.775296615260432,
+      "activeCryptocurrencies": 17632
     },
-    "generated_at": "2026-07-17T23:04:36.394Z"
+    "generated_at": "2026-07-18T00:05:26.384Z"
   }
 }
