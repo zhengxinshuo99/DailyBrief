@@ -1,4 +1,5 @@
 import OpenAI from "openai";
+import { LlmOutputError } from "../errors";
 import { classifyError, logLlmCall } from "../log";
 import type { LlmRunOptions, LlmRunResult } from "../llm";
 
@@ -81,29 +82,78 @@ export async function runOpenAICompat(
   const started = Date.now();
   const inputChars = opts.systemPrompt.length + opts.userPrompt.length;
   const timeoutMs = opts.timeoutMs ?? 180_000;
+  let outputChars = 0;
+  let finishReason: string | null = null;
+  let responseId: string | null = null;
+  let promptTokens: number | null = null;
+  let completionTokens: number | null = null;
+  let totalTokens: number | null = null;
 
   try {
-    const resp = await client.chat.completions.create(
-      {
-        model,
-        messages: [
-          { role: "system", content: opts.systemPrompt },
-          { role: "user", content: opts.userPrompt },
-        ],
-        // Explicit max_tokens — most providers default low (DeepSeek 4096,
-        // some MiniMax variants 2048). A 16-item batch enrichment routinely
-        // exceeds 4K output tokens once you count Chinese chars + JSON
-        // structure, and silent truncation made it through with just 1/16
-        // entries parseable. 8192 covers all observed daily batches with
-        // generous headroom. Match the explicit value Anthropic SDK uses.
-        max_tokens: 8192,
-        // Don't force JSON mode — not all OpenAI-compat providers support
-        // response_format=json_object, and our prompts + jsonrepair already
-        // handle the slop.
-      },
-      { timeout: timeoutMs },
-    );
-    const text = (resp.choices[0]?.message?.content ?? "").trim();
+    const request = {
+      model,
+      messages: [
+        { role: "system", content: opts.systemPrompt },
+        { role: "user", content: opts.userPrompt },
+      ],
+      // Explicit max_tokens — most providers default low (DeepSeek 4096,
+      // some MiniMax variants 2048). A 16-item batch enrichment routinely
+      // exceeds 4K output tokens once you count Chinese chars + JSON
+      // structure, and silent truncation made it through with just 1/16
+      // entries parseable. 8192 covers all observed daily batches with
+      // generous headroom. Match the explicit value Anthropic SDK uses.
+      max_tokens: 8192,
+      // DeepSeek documents JSON Output support and its prompts in this
+      // project already contain the required explicit JSON instruction.
+      // Keep other compatibility providers untouched because support for
+      // response_format is not universal.
+      ...(cfg.backend === "deepseek"
+        ? {
+            response_format: { type: "json_object" as const },
+            // V4 Flash enables high-effort thinking by default. For these
+            // structured editorial calls it can consume the output budget
+            // before emitting JSON, producing the observed empty content.
+            thinking: { type: "disabled" as const },
+          }
+        : {}),
+    } as OpenAI.Chat.Completions.ChatCompletionCreateParamsNonStreaming & {
+      thinking?: { type: "disabled" };
+    };
+    const resp = await client.chat.completions.create(request, {
+      timeout: timeoutMs,
+    });
+    responseId = resp.id ?? null;
+    promptTokens = resp.usage?.prompt_tokens ?? null;
+    completionTokens = resp.usage?.completion_tokens ?? null;
+    totalTokens = resp.usage?.total_tokens ?? null;
+    const choice = resp.choices[0];
+    finishReason = choice?.finish_reason ?? null;
+    const text = (choice?.message?.content ?? "").trim();
+    outputChars = text.length;
+
+    if (!choice) {
+      throw new LlmOutputError(
+        "empty_output",
+        `${cfg.backend} returned no completion choices`,
+      );
+    }
+    if (
+      finishReason === "length" ||
+      finishReason === "content_filter" ||
+      finishReason === "insufficient_system_resource"
+    ) {
+      throw new LlmOutputError(
+        "truncated_output",
+        `${cfg.backend} response was incomplete (finish_reason=${finishReason}, ${outputChars} chars)`,
+      );
+    }
+    if (!text) {
+      throw new LlmOutputError(
+        "empty_output",
+        `${cfg.backend} returned empty completion content (finish_reason=${finishReason ?? "missing"})`,
+      );
+    }
+
     const durationMs = Date.now() - started;
     logLlmCall({
       ts: new Date(started).toISOString(),
@@ -112,9 +162,14 @@ export async function runOpenAICompat(
       durationMs,
       success: true,
       inputChars,
-      outputChars: text.length,
+      outputChars,
       errorCategory: null,
       errorSnippet: null,
+      finishReason,
+      responseId,
+      promptTokens,
+      completionTokens,
+      totalTokens,
     });
     return { text, durationMs };
   } catch (err) {
@@ -127,9 +182,14 @@ export async function runOpenAICompat(
       durationMs,
       success: false,
       inputChars,
-      outputChars: 0,
+      outputChars,
       errorCategory: classifyError(msg),
       errorSnippet: msg.slice(0, 200),
+      finishReason,
+      responseId,
+      promptTokens,
+      completionTokens,
+      totalTokens,
     });
     throw err;
   }

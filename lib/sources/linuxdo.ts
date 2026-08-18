@@ -12,6 +12,20 @@ const HEADERS: Record<string, string> = {
 };
 
 const parser = new Parser({ timeout: 15000 });
+const DEFAULT_PRIMARY_URL = "https://linux.do/top.rss?period=daily";
+const DEFAULT_FALLBACK_URL = "https://linux.do/latest.rss";
+
+type FetchText = (
+  url: string,
+  headers?: Record<string, string>,
+) => Promise<string>;
+
+export interface LinuxDoFetchOptions {
+  limit?: number;
+  primaryUrl?: string;
+  fallbackUrl?: string;
+  fetchText?: FetchText;
+}
 
 function stripHtml(s: string): string {
   return s.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
@@ -26,12 +40,42 @@ function isCloudflareChallenge(text: string): boolean {
   );
 }
 
-async function fetchFeed(url: string) {
-  const xml = await curlFetch(url, HEADERS);
+function endpointLabel(url: string): string {
+  try {
+    const parsed = new URL(url);
+    return `${parsed.hostname}${parsed.pathname}`;
+  } catch {
+    return "invalid-url";
+  }
+}
+
+function errorDetail(error: unknown): string {
+  const message = error instanceof Error ? error.message : String(error);
+  const curlError = message.match(/curl: \(\d+\)[^\r\n]*/)?.[0];
+  return curlError ?? message.replace(/\s+/g, " ").trim().slice(0, 240);
+}
+
+async function fetchFeed(url: string, fetchText: FetchText) {
+  const xml = await fetchText(url, HEADERS);
+  if (!xml.trim()) {
+    throw new Error("empty response");
+  }
   if (isCloudflareChallenge(xml)) {
     throw new Error("cloudflare challenge page");
   }
-  return parser.parseString(xml);
+  const head = xml.trimStart().slice(0, 1000).toLowerCase();
+  if (head.startsWith("<!doctype html") || head.startsWith("<html")) {
+    throw new Error(`HTML response (${xml.length} chars)`);
+  }
+  if (!head.includes("<rss") && !head.includes("<feed")) {
+    throw new Error(`non-RSS response (${xml.length} chars)`);
+  }
+  try {
+    return await parser.parseString(xml);
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    throw new Error(`invalid RSS XML (${xml.length} chars): ${message}`);
+  }
 }
 
 /**
@@ -52,13 +96,29 @@ async function fetchFeed(url: string) {
  */
 export async function fetchLinuxDo(
   sourceId: string,
-  limit = 25,
+  options: LinuxDoFetchOptions = {},
 ): Promise<RawArticle[]> {
+  const {
+    limit = 25,
+    primaryUrl = DEFAULT_PRIMARY_URL,
+    fallbackUrl = DEFAULT_FALLBACK_URL,
+    fetchText = curlFetch,
+  } = options;
+  const failures: string[] = [];
   let feed;
   try {
-    feed = await fetchFeed("https://linux.do/top.rss?period=daily");
-  } catch {
-    feed = await fetchFeed("https://linux.do/latest.rss");
+    feed = await fetchFeed(primaryUrl, fetchText);
+  } catch (error) {
+    failures.push(`primary ${endpointLabel(primaryUrl)}: ${errorDetail(error)}`);
+    console.warn(`[linuxdo] ${failures[0]}; trying fallback`);
+    try {
+      feed = await fetchFeed(fallbackUrl, fetchText);
+    } catch (fallbackError) {
+      failures.push(
+        `fallback ${endpointLabel(fallbackUrl)}: ${errorDetail(fallbackError)}`,
+      );
+      throw new Error(`LinuxDo RSS unavailable — ${failures.join("; ")}`);
+    }
   }
 
   return (feed.items ?? [])

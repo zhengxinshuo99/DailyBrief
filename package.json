@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "test": "tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
     "dry-run": "tsx scripts/dry-run.ts",
     "daily": "tsx scripts/daily.ts",
     "render": "tsx scripts/render.ts",

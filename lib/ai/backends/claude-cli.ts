@@ -1,5 +1,6 @@
 import { spawn } from "node:child_process";
 import path from "node:path";
+import { LlmOutputError } from "../errors";
 import { classifyError, logLlmCall } from "../log";
 import type { LlmRunOptions, LlmRunResult } from "../llm";
 
@@ -51,7 +52,15 @@ export function runClaudeCli({
       settled = true;
       clearTimeout(timer);
       const durationMs = Date.now() - started;
-      const success = err === null;
+      const finalErr =
+        err ??
+        (stdout.trim()
+          ? null
+          : new LlmOutputError(
+              "empty_output",
+              "claude CLI returned empty completion content",
+            ));
+      const success = finalErr === null;
       logLlmCall({
         ts: new Date(started).toISOString(),
         backend: "claude-cli",
@@ -62,11 +71,11 @@ export function runClaudeCli({
         outputChars: stdout.length,
         errorCategory: success
           ? null
-          : classifyError(`${stderr}\n${err?.message ?? ""}`),
+          : classifyError(`${stderr}\n${finalErr?.message ?? ""}`),
         errorSnippet:
           !success && stderr.trim() ? stderr.trim().slice(0, 200) : null,
       });
-      if (err) reject(err);
+      if (finalErr) reject(finalErr);
       else resolve({ text: stdout.trim(), durationMs });
     };
 

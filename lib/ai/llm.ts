@@ -39,6 +39,8 @@ export interface LlmRunResult {
   durationMs: number;
 }
 
+export type LlmRunner = (opts: LlmRunOptions) => Promise<LlmRunResult>;
+
 export type LlmBackendId =
   | "claude-cli"
   | "anthropic"

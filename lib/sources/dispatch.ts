@@ -15,7 +15,9 @@ export async function fetchSource(source: SourceDef): Promise<RawArticle[]> {
   if (source.id === "hackernews") return fetchHackerNews(source.id);
   if (source.id === "github-trending") return fetchGithubTrending(source.id);
   if (source.id === "v2ex-hot") return fetchV2ex(source.id);
-  if (source.id === "linuxdo") return fetchLinuxDo(source.id);
+  if (source.id === "linuxdo") {
+    return fetchLinuxDo(source.id, { primaryUrl: source.url });
+  }
   if (source.id === "attentionvc-ai") return fetchAttentionVc(source.id);
   if (source.id === "huggingface-papers") return fetchHuggingfacePapers(source.id, source.keywords);
   return fetchRss(source.id, source.url, source.category, {

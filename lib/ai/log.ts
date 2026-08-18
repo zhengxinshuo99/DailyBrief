@@ -12,6 +12,11 @@ export interface LlmCallRecord {
   outputChars: number;
   errorCategory: LlmErrorCategory;
   errorSnippet: string | null;
+  finishReason?: string | null;
+  responseId?: string | null;
+  promptTokens?: number | null;
+  completionTokens?: number | null;
+  totalTokens?: number | null;
 }
 
 const LOG_PATH = "logs/llm-calls.jsonl";

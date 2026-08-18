@@ -1,4 +1,5 @@
 import Anthropic from "@anthropic-ai/sdk";
+import { LlmOutputError } from "../errors";
 import { classifyError, logLlmCall } from "../log";
 import type { LlmRunOptions, LlmRunResult } from "../llm";
 
@@ -62,6 +63,8 @@ export async function runAnthropicCompat(
   const started = Date.now();
   const inputChars = opts.systemPrompt.length + opts.userPrompt.length;
   const timeoutMs = opts.timeoutMs ?? 180_000;
+  let outputChars = 0;
+  let stopReason: string | null = null;
 
   try {
     const resp = await client.messages.create(
@@ -73,11 +76,25 @@ export async function runAnthropicCompat(
       },
       { timeout: timeoutMs },
     );
+    stopReason = resp.stop_reason ?? null;
     const text = resp.content
       .filter((block): block is Anthropic.TextBlock => block.type === "text")
       .map((block) => block.text)
       .join("")
       .trim();
+    outputChars = text.length;
+    if (stopReason === "max_tokens") {
+      throw new LlmOutputError(
+        "truncated_output",
+        `${cfg.backend} response was incomplete (stop_reason=max_tokens, ${outputChars} chars)`,
+      );
+    }
+    if (!text) {
+      throw new LlmOutputError(
+        "empty_output",
+        `${cfg.backend} returned empty completion content (stop_reason=${stopReason ?? "missing"})`,
+      );
+    }
     const durationMs = Date.now() - started;
     logLlmCall({
       ts: new Date(started).toISOString(),
@@ -86,9 +103,10 @@ export async function runAnthropicCompat(
       durationMs,
       success: true,
       inputChars,
-      outputChars: text.length,
+      outputChars,
       errorCategory: null,
       errorSnippet: null,
+      finishReason: stopReason,
     });
     return { text, durationMs };
   } catch (err) {
@@ -101,9 +119,10 @@ export async function runAnthropicCompat(
       durationMs,
       success: false,
       inputChars,
-      outputChars: 0,
+      outputChars,
       errorCategory: classifyError(msg),
       errorSnippet: msg.slice(0, 200),
+      finishReason: stopReason,
     });
     throw err;
   }
