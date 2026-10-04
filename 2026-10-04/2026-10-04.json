@@ -1,149 +1,149 @@
 {
-  "hero_headline": "AI 模型密集迭代，俄军持续打击基辅桥梁",
-  "daily_overview": "今日科技界迎来新一轮模型迭代：OpenAI 发布 GPT-6 家族实操指南，DeepMind 推出 Gemini 4 Argon 并上线 SynthID Bio 蛋白质水印技术；开源社区同步涌现 AstaBrief、OneStreamer 等研究方向，Uber 则披露 MCP Gateway 构建经验。财经方面，巴西大选前民调胶着，G7 宣布协同释放数百万桶石油以平抑油价，英国柴油价格首次突破每升 2 英镑，美国就业市场在中期选举前明显放缓，Temu 英国销售额翻倍至 1.71 亿美元。时政层面，俄军连续打击基辅两座主要桥梁，法国校园抗议蔓延致约 5000 人被捕，中国对欧盟发起反倾销调查使中欧贸易摩擦升温。",
+  "hero_headline": "AI模型迭代加速，美墨边境联合行动，油价与就业数据承压",
+  "daily_overview": "科技领域，OpenAI与DeepMind相继发布GPT-6指南和Gemini 4 Argon，前沿模型竞争持续升温；MIT Tech Review则质疑大模型推理能力。财经方面，美国就业市场显著放缓，G7宣布释放石油储备以平抑油价，英国柴油价格史上首次突破每升2英镑。时政方面，美墨在得州边境开展联合军事行动，中欧贸易摩擦因反倾销调查面临升级风险，巴西大选进入白热化阶段，全球地缘与经济不确定性交织。",
   "tech_briefs": [
     {
-      "title": "OpenAI 发布 GPT-6 家族模型选择与调优指南",
+      "title": "OpenAI发布GPT-6家族模型实用指南",
       "url": "https://openai.com/index/practical-guide-building-gpt-6",
       "source": "OpenAI News",
-      "summary": "OpenAI 发布面向创业公司的 GPT-6 实操指南，涵盖模型选择、推理强度调优、提示与技能改进、工具协调及生产工作流准备，帮助企业将新一代模型能力落地到实际业务中。",
+      "summary": "OpenAI发布GPT-6家族模型指南，指导初创企业选择模型、调整推理强度、优化提示词与技能、协调工具并准备工作流，以投入生产环境。",
       "importance": 9
     },
     {
-      "title": "DeepMind 发布 Gemini 4 Argon 与 SynthID Bio",
+      "title": "DeepMind发布Gemini 4 Argon前沿智能模型",
       "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
       "source": "DeepMind Blog",
-      "summary": "DeepMind 推出新一代前沿智能模型 Gemini 4 Argon，同时发布 SynthID Bio 概念验证，可为 AI 生成的蛋白质添加水印并保持生物功能，在生物安全溯源方面迈出一步。（多家报道）",
+      "summary": "DeepMind推出Gemini 4 Argon，称其为前沿智能的新时代。该模型是Gemini系列的最新迭代，旨在提升推理与多模态能力，但具体技术细节尚未完全公开。",
       "importance": 9
     },
     {
-      "title": "Uber 分享 MCP Gateway 平台设计经验",
+      "title": "MIT Tech Review：不要被大模型「推理」能力迷惑",
+      "url": "https://www.technologyreview.com/2026/10/02/1145639/dont-be-fooled-llms-dont-reason/",
+      "source": "MIT Tech Review AI",
+      "summary": "MIT Tech Review刊文指出，大语言模型并不具备真正的推理能力，仅凭输出类似人类推理的文本并不能证明其理解逻辑。文章以AlphaGo历史案例为引，呼吁理性看待AI能力边界。",
+      "importance": 8
+    },
+    {
+      "title": "Uber开源MCP Gateway管理平台设计",
       "url": "https://x.com/UberEng/status/2106071967619322330",
       "source": "X 推文 (AttentionVC)",
-      "summary": "Uber 工程团队披露内部 MCP 管理平台 MCP Gateway 的设计细节。随着 AI 代理快速普及，早期临时集成难以规模化管理，该平台用于统一管理代理对代码、数据和运营系统的访问。",
+      "summary": "Uber工程团队分享MCP Gateway设计，该平台用于统一管理Model Context Protocol集成。随着AI代理快速普及，早期临时集成难以扩展，MCP Gateway旨在提供标准化、可扩展的代理与工具协调层。",
       "importance": 7
     },
     {
-      "title": "GitHub 热门项目 ponytail 与 impeccable 发布",
-      "url": "https://github.com/DietrichGebert/ponytail",
-      "source": "GitHub Trending",
-      "summary": "ponytail 旨在让 AI 代理像资深开发者一样思考，倡导「最好的代码是从未写过的代码」；impeccable 则提供一套设计语言，提升 AI 工具的设计能力。两个项目均针对 AI 编程工作流的实际痛点。（多家报道）",
-      "importance": 6
-    },
-    {
-      "title": "Allen AI 开源快速报告生成模型 AstaBrief",
-      "url": "https://huggingface.co/blog/allenai/astabrief",
+      "title": "HuggingFace：代理声称完成，数据库却不同意",
+      "url": "https://huggingface.co/blog/microsoft/thinkingbox",
       "source": "Hugging Face Blog",
-      "summary": "Allen AI 开源 AstaBrief，这是其 Asta 体系中的快速报告生成模型，旨在高效产出结构化报告内容，为科研和知识工作场景提供可复用的开源方案。",
-      "importance": 6
+      "summary": "微软在HuggingFace发文探讨AI代理可靠性问题，以「代理说完成了，数据库不同意」为引，分析代理在任务执行中可能出现的状态不一致与幻觉，并介绍相关验证工具ThinkingBox。",
+      "importance": 7
     }
   ],
   "finance_briefs": [
     {
-      "title": "巴西大选民调胶着，卢拉与博索纳罗势均力敌",
-      "url": "https://www.bloomberg.com/news/articles/2026-10-03/lula-bolsonaro-in-dead-heat-as-brazil-prepares-to-vote",
-      "source": "Bloomberg Markets",
-      "summary": "两项最新民调显示，巴西总统卢拉与右翼挑战者弗拉维奥·博索纳罗在周日大选前支持率不相上下，选情高度胶着，市场密切关注选举结果对拉美资产的影响。",
-      "importance": 8
-    },
-    {
-      "title": "G7 同意释放数百万桶石油与柴油以平抑油价",
-      "url": "https://www.bbc.co.uk/news/articles/ck87zg8jnwngo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Business",
-      "summary": "七国集团协调释放数百万桶石油和柴油，旨在防止油价进一步飙升并避免美国柴油出口禁令，此举是对此前特朗普威胁的回应。",
-      "importance": 8
-    },
-    {
-      "title": "英国柴油价格首次突破每升 2 英镑",
-      "url": "https://www.bbc.co.uk/news/articles/crn8e86y5n0zo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Business",
-      "summary": "据 RAC 统计，英国柴油平均零售价达到每升 200.01 便士的历史高位，全球油价上涨持续推高加油站价格，给家庭和企业带来压力。（多家报道）",
-      "importance": 7
-    },
-    {
       "title": "美国就业市场在中期选举前显著放缓",
       "url": "https://www.bbc.co.uk/news/articles/cm2d6gg0642yo?at_medium=RSS&at_campaign=rss",
       "source": "BBC Business",
-      "summary": "美国雇主暂停招聘，失业率小幅上升。距离中期选举仅一个月，就业市场降温成为政治与经济双重焦点。",
+      "summary": "美国雇主暂停招聘，失业率小幅上升，就业市场在中期选举前一个月出现明显放缓。该数据可能影响选民对经济前景的判断，并为美联储政策路径增添变数。",
+      "importance": 9
+    },
+    {
+      "title": "G7将协调释放数百万桶石油和柴油",
+      "url": "https://www.bbc.co.uk/news/articles/ck87zg8jnwngo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Business",
+      "summary": "在特朗普发出威胁后，G7同意协调释放数百万桶石油和柴油，旨在遏制油价进一步飙升并避免美国柴油出口禁令。此举反映全球能源市场对供应中断的担忧加剧。",
+      "importance": 9
+    },
+    {
+      "title": "英国柴油价格史上首次突破每升2英镑",
+      "url": "https://www.bbc.co.uk/news/articles/c20zgjzz0e4o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Business",
+      "summary": "英国柴油平均价格达到每升200.01便士，创历史新高。全球油价上涨持续推高加油站价格，RAC呼吁政府采取行动缓解家庭和企业压力。（多家报道）",
       "importance": 8
     },
     {
-      "title": "Temu 英国销售额翻倍至 1.71 亿美元",
+      "title": "各国政府更愿持有美国股票而非国债",
+      "url": "https://www.economist.com/finance-and-economics/2026/10/01/governments-want-to-hold-americas-shares-more-than-its-debts",
+      "source": "The Economist Finance",
+      "summary": "经济学人指出，多国政府正将外汇储备从美国国债转向美国股票等风险资产。这种配置转变可能加剧全球金融市场波动，并反映对美元资产安全性和收益性的重新评估。",
+      "importance": 8
+    },
+    {
+      "title": "Temu英国销售额翻倍至1.71亿美元",
       "url": "https://www.ft.com/content/b119a81f-2347-4ba8-8b5f-13b380cf45fa?syn-25a6b1a6=1",
       "source": "Financial Times",
-      "summary": "中国电商平台 Temu 在英国销售额增长逾一倍至 1.71 亿美元，其利用小额包裹免关税的税收漏洞引发当地关注。",
+      "summary": "中国电商Temu在英国销售额同比增长超过一倍，达到1.71亿美元。报道称其利用小额包裹免关税的税收漏洞，该模式正面临英国监管机构的审查压力。",
       "importance": 7
     }
   ],
   "politics_briefs": [
     {
-      "title": "俄军连续打击基辅两座主要桥梁",
-      "url": "https://www.bbc.co.uk/news/articles/c83vqxzdg1yko?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "summary": "俄罗斯对基辅北桥发动打击，此前已多次攻击该市另一座主要桥梁。桥梁是基辅通勤者的关键通道，也是俄方针对基础设施广泛轰炸行动的最新目标。（多家报道）",
+      "title": "墨西哥称与美军在得州边境联合部署",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-03/mexico-says-its-troops-sent-to-border-in-conjunction-with-us",
+      "source": "Bloomberg Markets",
+      "summary": "墨西哥政府表示，已与美国在得克萨斯州边境地区联合部署军事人员，作为「镜像行动」的一部分。此举标志着两国在边境安全合作上的进一步深化，但具体细节尚未完全披露。",
       "importance": 9
-    },
-    {
-      "title": "法国校园抗议蔓延，约 5000 人被捕",
-      "url": "https://www.npr.org/2026/10/03/nx-s1-5989532/france-arrests-5-000-people-mostly-teens-as-school-protests-spread",
-      "source": "NPR World",
-      "summary": "法国高中生抗议教室拥挤、教师短缺和校舍失修，示威蔓延至全国多个城市，目前已约 5000 人被捕，其中多数为青少年。",
-      "importance": 8
     },
     {
       "title": "中欧贸易会谈在即，中国对欧盟发起反倾销调查",
       "url": "https://www.dw.com/zh/中欧贸易会谈在即-中国对欧盟发起反倾销调查/a-79531185?maca=chi-rss-chi-all-1127-rdf",
       "source": "DW 中文",
-      "summary": "中国商务部宣布对自欧盟进口的对硝基甲苯发起反倾销调查。距欧盟贸易专员谢夫乔维奇赴京与中国商务部长王文涛会谈不足一周，中欧贸易摩擦升级风险加剧。",
+      "summary": "中国商务部宣布对自欧盟进口的对硝基甲苯发起反倾销调查。此时距欧盟贸易专员赴京会谈不足一周，中欧贸易摩擦升级风险加剧，双方在多个议题上的分歧可能进一步扩大。",
+      "importance": 9
+    },
+    {
+      "title": "巴西大选临近，卢拉与博索纳罗支持率胶着",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-03/lula-bolsonaro-in-dead-heat-as-brazil-prepares-to-vote",
+      "source": "Bloomberg Markets",
+      "summary": "巴西总统选举前夕，卢拉与右翼挑战者弗拉维奥·博索纳罗在最新民调中势均力敌，均难以在周日首轮投票中直接胜出。此次选举也被部分选民视为对特朗普拉美影响力的公投。（多家报道）",
       "importance": 8
     }
   ],
-  "editor_note": "AI 模型迭代与地缘摩擦同步加速：模型能力提升需匹配治理与安全机制，能源与贸易博弈则直接影响市场预期，值得持续跟踪。",
+  "editor_note": "今日焦点：AI模型竞赛白热化，但理性审视声音渐强；能源与就业数据牵动市场，地缘政治风险多点升温。",
   "keywords": [
     "GPT-6",
-    "Gemini 4 Argon",
-    "G7 释放石油",
+    "Gemini 4",
+    "G7石油",
+    "美国就业",
+    "美墨边境",
+    "中欧贸易",
     "巴西大选",
-    "基辅桥梁遇袭",
-    "中欧贸易摩擦",
-    "英国柴油价格",
-    "美国就业放缓"
+    "柴油价格"
   ],
   "trading": {
-    "market_overview": "本期 21 个标的的技术面呈现明显分层。美股方面整体最强：QQQ 现价距 52 周高点仅 0.66%，SMA20/50/200 多头排列且 MACD 红柱扩张；SPY 距高点 1.25% 但已现 MACD 死叉，动量略钝化；NVDA 近 5 日涨 3.95%、MSFT 维持 MACD 金叉，而 AAPL、META 出现死叉，指数内部强弱分化。加密板块处于贪婪区间（恐慌贪婪指数 67），总市值 2.90T 美元、24h 回落 2.23%，BTC 主导率 58.6%、ETH 11.3%；BTC 现价 84750.12 仍高于 SMA20/50/200 呈多头排列，但 MACD 1938.6 低于信号线 2093.4 已死叉，RSI14 63.7；ETH、SOL 亦为多头排列，RSI 分别 60.5、63.9，属偏强整理。中概为全场最弱：BABA、PDD、JD、0700.HK 四者齐现 MACD 死叉，BABA（35.6）、PDD（33.4）、JD（30.4）RSI14 全部逼近超卖，0700.HK 同时触发空头排列并接近 52 周低点。商品外汇与宏观继续背离：黄金期货跌破三条均线、RSI14 34.1 走弱，WTI 原油虽 MACD 死叉却仍维持多头排列；美元指数 RSI14 71.7 与 10Y 美债收益率 RSI14 74.6 双双超买并接近 52 周高点，VIX 则回落至 15.31、跌 6.59%，风险溢价指标整体收敛。",
+    "market_overview": "美股主要指数技术面偏强：QQQ 现价 749.58 距 52 周高仅 -0.66%，RSI14 65.4，MACD 8.2047 显著高于信号线 6.4876；SPY 现价 769.64 贴近 52 周高 -1.25%，但已触发 MACD 死叉，动量略有钝化。个股分化明显，NVDA 与 MSFT 呈 MACD 金叉加多头排列，GOOGL、META、TSLA 则见死叉读数。加密总市值 2.90T USD（24h -2.14%）、BTC 主导率 58.6%、ETH 11.3%，恐慌贪婪指数 65 处贪婪区间；BTC-USD 现价 84787.02 高于 SMA20/50/200 多头排列、RSI14 63.8，但 MACD 已死叉，距 52 周高 -32.81%，ETH 与 SOL 同为多头排列但 SOL 亦死叉。中概股整体最弱：BABA、PDD、JD、0700.HK 全线空头排列并触发死叉，RSI14 分别 35.6、33.4、30.4、40.6 偏向弱势区，0700.HK 距 52 周低仅 +2.48%。商品外汇方面，黄金期货 4162.3 跌破三层均线、RSI14 34.1 空头排列，WTI 原油 91.11 仍多头排列但 MACD 接近死叉，美元指数 101.92 与 10Y 美债收益率 5.28 双双 RSI 超买（71.7 与 74.6）并接近 52 周高，DXY 走强的同时美元兑人民币 6.7 处空头排列，VIX 15.31 单日 -6.59% 显示风险对冲需求阶段性回落。",
     "watchlist": [
       {
         "symbol": "^TNX",
-        "display_name": "10Y 美债收益率 (%)",
+        "display_name": "10Y 美债收益率 (^TNX)",
         "stance": "偏上行",
-        "rationale": "现价 5.28%，站上 SMA20（5.05）、SMA50（4.83）与 SMA200（4.45）构成完整多头排列，且接近 52 周高点仅差 1.22%。RSI14 达 74.6 已进入超买区，MACD 0.1343 高于信号线 0.1163，红柱延续；近 5 日累计上行 1.79%，动量指标读数处于本轮最强区间。"
+        "rationale": "现价 5.28，RSI14 达 74.6 进入超买区，且位于 SMA20(5.05)、SMA50(4.83)、SMA200(4.45) 之上呈多头排列，距 52 周高仅 -1.22%，近 5 日上行 1.79%，MACD 0.1343 高于信号线 0.1163 维持红柱，动量读数偏强但超买需留意。"
       },
       {
         "symbol": "DX-Y.NYB",
         "display_name": "美元指数 DXY",
         "stance": "偏上行",
-        "rationale": "现价 101.92，距 52 周高点仅 0.28%，SMA20（100.36）＞SMA50（100）＞SMA200（99.27）多头排列清晰。RSI14 为 71.7 处超买区，MACD 0.5794 显著高于信号线 0.3881，Histogram 为正；近 5 日上涨 0.94%，趋势与动量指标同向共振。"
+        "rationale": "现价 101.92，RSI14 71.7 处超买，MACD 0.5794 高于信号线 0.3881，站上 SMA20(100.36)、SMA50(100)、SMA200(99.27) 多头排列，距 52 周高仅 -0.28%，5 日涨 0.94%，与美债收益率同步走强的技术读数一致。"
       },
       {
         "symbol": "JD",
         "display_name": "京东 (JD)",
         "stance": "偏下行",
-        "rationale": "现价 25.78 低于 SMA20（26.93）、SMA50（29.01）与 SMA200（28.89），近 1 日跌 2.24%、近 5 日跌 2.75%。RSI14 仅 30.4，逼近超卖临界；MACD -0.6614 略低于信号线 -0.6602，动能仍偏空，距 52 周高点回落 28.67%，属中概板块中技术面最弱一档。"
+        "rationale": "现价 25.78，RSI14 30.4 逼近超卖，位于 SMA20(26.93)、SMA50(29.01)、SMA200(28.89) 之下，近 1 日 -2.24%、5 日 -2.75%，MACD -0.6614 略低于信号线 -0.6602 呈死叉，距 52 周高 -28.67%，空头动能读数明显。"
       },
       {
-        "symbol": "GC=F",
-        "display_name": "黄金期货",
+        "symbol": "0700.HK",
+        "display_name": "腾讯控股 (0700.HK)",
         "stance": "偏下行",
-        "rationale": "现价 4162.3，位于 SMA20（4334.33）、SMA50（4366.27）与 SMA200（4553.37）下方形成空头排列，距 52 周高点回落 25.49%。RSI14 仅 34.1 接近超卖，近 5 日下跌 3.68%；MACD -63.4969 明显低于信号线 -38.6231，绿柱扩张，下行动量尚未收敛。"
+        "rationale": "现价 421.2，RSI14 40.6，跌破 SMA20(433.7)、SMA50(447.51)、SMA200(498.88) 三层均线呈空头排列，5 日跌 3.92%、1 日跌 2.27%，MACD -3.9952 低于信号线 -3.9536，距 52 周低仅 +2.48%，弱于大盘的中概读数。"
       },
       {
-        "symbol": "QQQ",
-        "display_name": "纳斯达克 100 ETF (QQQ)",
+        "symbol": "NVDA",
+        "display_name": "Nvidia (NVDA)",
         "stance": "偏上行",
-        "rationale": "现价 749.58，距 52 周高点仅 0.66%，SMA20（727.78）＞SMA50（716.82）＞SMA200（668.6）呈多头排列；RSI14 65.4 位于强势但未超买区间，MACD 8.2047 高于信号线 6.4876，红柱仍在。近 1 日涨 1.02%、近 5 日涨 0.68%，相对美股大盘动量居前。"
+        "rationale": "现价 233.95，RSI14 62.9 未超买，高于 SMA20(223.79)、SMA50(218.28)、SMA200(200.71) 多头排列，近 5 日涨 3.95%、1 日涨 1.34%，MACD 3.4886 高于信号线 2.6614 红柱扩张，距 52 周高仅 -1.65%，动量读数居美股前列。"
       }
     ],
-    "risk_caveat": "本报告仅基于公开行情计算出的技术指标读数进行客观复述，不构成任何投资建议或涨跌预测。过去走势不代表未来表现，指标亦可能钝化或失效，请读者结合自身风险承受能力独立判断，仅供技术指标解读参考。",
+    "risk_caveat": "本报告仅基于公开行情计算出的技术指标读数进行客观复述，不构成任何投资建议；过去走势不代表未来表现，超买超卖与金叉死叉亦可能快速反转，仅供技术指标解读参考。",
     "tickers": [
       {
         "symbol": "SPY",
@@ -397,18 +397,18 @@
         "group": "crypto",
         "currency": "USD",
         "exchangeName": "CCC",
-        "currentPrice": 84750.12,
-        "pct1Day": 0.2993105449209021,
-        "pct5Day": 1.493978013785866,
-        "pct52WeekHigh": -32.84356884380245,
-        "pct52WeekLow": 46.75913177316676,
-        "sma20": 82441.1890625,
-        "sma50": 78558.3896875,
-        "sma200": 71425.3751171875,
-        "rsi14": 63.69049260714375,
-        "macd": 1938.632784636764,
-        "macdSignal": 2093.3712853822562,
-        "macdHistogram": -154.73850074549227,
+        "currentPrice": 84787.02,
+        "pct1Day": 0.34298062537752516,
+        "pct5Day": 1.538168249607474,
+        "pct52WeekHigh": -32.81432909393939,
+        "pct52WeekLow": 46.82303034891427,
+        "sma20": 82443.034375,
+        "sma50": 78559.1278125,
+        "sma200": 71425.5596484375,
+        "rsi14": 63.80040063334434,
+        "macd": 1941.5768729566043,
+        "macdSignal": 2093.960103047177,
+        "macdHistogram": -152.38323009057285,
         "trend": "bullish",
         "rsiState": "normal",
         "signals": [
@@ -429,18 +429,18 @@
         "group": "crypto",
         "currency": "USD",
         "exchangeName": "CCC",
-        "currentPrice": 2686.59,
-        "pct1Day": 0.6910731852425589,
-        "pct5Day": -0.07731339941469315,
-        "pct52WeekHigh": -43.50229852667174,
-        "pct52WeekLow": 78.33254796181656,
-        "sma20": 2637.304309082031,
-        "sma50": 2484.0754272460936,
-        "sma200": 2115.8079333496094,
-        "rsi14": 60.50137220854785,
-        "macd": 66.4658646710136,
-        "macdSignal": 78.07504199967168,
-        "macdHistogram": -11.609177328658077,
+        "currentPrice": 2690.01,
+        "pct1Day": 0.8192518318888788,
+        "pct5Day": 0.049887099423614516,
+        "pct52WeekHigh": -43.430377564024376,
+        "pct52WeekLow": 78.55952780805387,
+        "sma20": 2637.475305175781,
+        "sma50": 2484.1438256835936,
+        "sma200": 2115.8250329589846,
+        "rsi14": 60.80018512269846,
+        "macd": 66.73867895167814,
+        "macdSignal": 78.1296048558521,
+        "macdHistogram": -11.390925904173955,
         "trend": "bullish",
         "rsiState": "normal",
         "signals": [
@@ -456,18 +456,18 @@
         "group": "crypto",
         "currency": "USD",
         "exchangeName": "CCC",
-        "currentPrice": 119.73,
-        "pct1Day": 0.9398944782327621,
-        "pct5Day": 0.7516775627997883,
-        "pct52WeekHigh": -49.54967193592315,
-        "pct52WeekLow": 98.18017860547893,
-        "sma20": 114.08709182739258,
-        "sma50": 103.77188446044921,
-        "sma200": 85.79205265045167,
-        "rsi14": 63.85325758703929,
-        "macd": 5.0248702191267824,
-        "macdSignal": 5.4331213243503855,
-        "macdHistogram": -0.4082511052236031,
+        "currentPrice": 119.98,
+        "pct1Day": 1.1506601478189826,
+        "pct5Day": 0.9620502295558222,
+        "pct52WeekHigh": -49.444330066583646,
+        "pct52WeekLow": 98.59398504205598,
+        "sma20": 114.09959182739257,
+        "sma50": 103.77688446044922,
+        "sma200": 85.79330265045166,
+        "rsi14": 64.15601236039518,
+        "macd": 5.0448132390743865,
+        "macdSignal": 5.437109928345713,
+        "macdHistogram": -0.3922966892713262,
         "trend": "bullish",
         "rsiState": "normal",
         "signals": [
@@ -799,19 +799,19 @@
       }
     ],
     "crypto_fear_greed": {
-      "value": 67,
+      "value": 65,
       "classification": "Greed",
       "classificationCn": "贪婪",
-      "timestamp": "2026-10-03T00:00:00.000Z"
+      "timestamp": "2026-10-04T00:00:00.000Z"
     },
     "crypto_global": {
-      "totalMarketCapUsd": 2898940658514.8413,
-      "total24hVolumeUsd": 45960761567.0163,
-      "marketCapChangePct24h": -2.2315692396610314,
-      "btcDominance": 58.61459136758981,
-      "ethDominance": 11.290805364180569,
+      "totalMarketCapUsd": 2903419571123.4985,
+      "total24hVolumeUsd": 46047323512.73283,
+      "marketCapChangePct24h": -2.140590973018753,
+      "btcDominance": 58.606083832297195,
+      "ethDominance": 11.301995880159808,
       "activeCryptocurrencies": 21818
     },
-    "generated_at": "2026-10-03T23:18:53.392Z"
+    "generated_at": "2026-10-04T00:32:28.320Z"
   }
 }
